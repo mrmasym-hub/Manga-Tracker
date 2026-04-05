@@ -1,0 +1,5 @@
+{
+  "name": "Manga Tracker Dashboard",
+  "description": "A dashboard to track your manga reading progress with automatic web scraping for updates.",
+  "requestFramePermissions": []
+}

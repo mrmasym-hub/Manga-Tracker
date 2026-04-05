@@ -1,0 +1,26 @@
+{
+  "entities": {
+    "Manga": {
+      "title": "Manga",
+      "description": "A manga entry tracked by the user",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "description": "The ID of the user who owns this entry" },
+        "title": { "type": "string", "description": "The title of the manga" },
+        "imageUrl": { "type": "string", "description": "The URL of the manga cover image" },
+        "url": { "type": "string", "description": "The URL of the manga on an external site" },
+        "currentChapter": { "type": "number", "description": "The last chapter read by the user" },
+        "totalChapters": { "type": "number", "description": "The total number of chapters available" },
+        "lastUpdated": { "type": "string", "description": "The date the last chapter was released" },
+        "createdAt": { "type": "object", "description": "Timestamp when the entry was created" }
+      },
+      "required": ["userId", "title", "url", "currentChapter"]
+    }
+  },
+  "firestore": {
+    "/mangas/{mangaId}": {
+      "schema": "Manga",
+      "description": "User's manga tracking entries"
+    }
+  }
+}
